@@ -1,6 +1,33 @@
 "use strict"
 
 // Esther's solution
+function countApplesAndOranges(s, t, a, b, apples, oranges){
+    let appleCount = [];
+    let orangeCount = [];
+    let applesAtSamHouse = 0;
+    let orangesAtSamHouse = 0;
+
+    apples.map((x)=>{
+        appleCount.push(x + a);
+    })
+    oranges.map((x)=>{
+        orangeCount.push(x + b);
+    })
+    appleCount.map((x) =>{
+        if(x >= s && x <= t){
+            applesAtSamHouse++;
+        }
+    })
+    orangeCount.map((x) =>{
+        if(x >= s && x <= t){
+            orangesAtSamHouse++;
+        }
+    })
+
+    console.log(applesAtSamHouse);
+    console.log(orangesAtSamHouse)
+    
+}
 
 
 
